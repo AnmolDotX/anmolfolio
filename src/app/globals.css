@@ -22,3 +22,39 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+@keyframes gradient-border {
+  0% {
+    border-image-source: linear-gradient(45deg, #1b91ff, #7873f5);
+  }
+  50% {
+    border-image-source: linear-gradient(135deg, #996eff, #0cbaff);
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, #1379ff, #7873f5);
+  }
+}
+
+
+.animate-gradient-border {
+  position: relative;
+  border-width: 4px;
+  border-image-slice: 1;
+  border-radius: 16px;
+  animation: gradient-border 3s infinite;
+  overflow: hidden;
+}
+
+.animate-gradient-border::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 16px;
+  border: inherit;
+  border-image-slice: 1;
+  animation: inherit;
+}
+
