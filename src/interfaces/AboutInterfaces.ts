@@ -26,4 +26,5 @@ export interface AboutInterfaces {
   currentPosition: string;
   _createdAt: string;
   currentCompany: string;
+  WhatIsTitle : string;
 }

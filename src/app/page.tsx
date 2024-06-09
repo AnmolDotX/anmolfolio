@@ -28,8 +28,7 @@ const HomePage = () => {
           {aboutData?.name}
         </span>
         <p className='text-2xl font-bold tracking-widest font-mono'>
-          <span className="text-blue-500 animate-pulse">{aboutData?.currentPosition}</span> @{" "}
-          <span className="text-orange-700 font-sans font-extrabold">{aboutData?.currentCompany}</span>
+          <span className="text-blue-500 animate-pulse">{aboutData?.WhatIsTitle}</span>
         </p>
         <p className='max-w-[330px] text-center text-xs font-light text-slate-300 mb-3'>
           {aboutData?.bio}

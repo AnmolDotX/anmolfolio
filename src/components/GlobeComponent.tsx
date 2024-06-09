@@ -26,8 +26,8 @@ const GlobeComponent = () => {
         >
         </motion.div>
         <div className='absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40' />
-        <div className='absolute  h-[80%] z-50 flex items-center justify-center inset-auto'>
-          <World data={sampleArcs} globeConfig={globeConfig} />;
+        <div className='absolute w-full h-[90%] z-50 flex items-center justify-center inset-auto'>
+          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
     </div>
