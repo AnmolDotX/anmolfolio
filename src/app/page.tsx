@@ -1,5 +1,6 @@
 "use client";
 import { SparkleUnderline } from "@/components";
+import GlobeComponent from "@/components/GlobeComponent";
 import { AboutInterfaces } from "@/interfaces/AboutInterfaces";
 import { client } from "@/sanity";
 import { useEffect, useState } from "react";
@@ -27,16 +28,16 @@ const HomePage = () => {
           {aboutData?.name}
         </span>
         <p className='text-2xl font-bold tracking-widest font-mono'>
-          <span className="text-blue-500">{aboutData?.currentPosition}</span> @{" "}
+          <span className="text-blue-500 animate-pulse">{aboutData?.currentPosition}</span> @{" "}
           <span className="text-orange-700 font-sans font-extrabold">{aboutData?.currentCompany}</span>
         </p>
-        <p className='max-w-[330px] text-center text-xs font-thin text-slate-300 mb-3'>
+        <p className='max-w-[330px] text-center text-xs font-light text-slate-300 mb-3'>
           {aboutData?.bio}
         </p>
         <SparkleUnderline className='-mb-16' />
       </div>
-      <div>Data</div>
-    </>
+      <GlobeComponent/>
+    </> 
   );
 };
 
