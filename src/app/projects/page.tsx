@@ -15,7 +15,7 @@ import "swiper/css/scrollbar";
 const robotoMono = Roboto_Mono({
     subsets: ["latin", "greek", "cyrillic"],
     weight: ["100", "200", "300", "400", "500", "600", "700"],
-  });
+});
 
 const ProjectsPage = () => {
   const [projectData, setProjectData] = useState<ProjectResponseInterface[]>();
@@ -60,6 +60,7 @@ const ProjectsPage = () => {
           loop={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          autoplay={true}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
           centeredSlides={true}

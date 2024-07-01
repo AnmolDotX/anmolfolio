@@ -1,7 +1,7 @@
 export const globeConfig = {
   pointSize: 4,
   globeColor: "#062056",
-  showAtmosphere: true,
+  showAtmosphere: false,
   atmosphereColor: "#FFFFFF",
   atmosphereAltitude: 0.1,
   emissive: "#062056",
@@ -16,9 +16,9 @@ export const globeConfig = {
   arcLength: 0.9,
   rings: 1,
   maxRings: 3,
-  initialPosition: { lat: 22.3193, lng: 114.1694 },
+  initialPosition: { lat: 23.310863, lng: 85.307159},
   autoRotate: true,
-  autoRotateSpeed: 0.5,
+  autoRotateSpeed: 1,
 };
 export const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
 export const sampleArcs = [
