@@ -38,11 +38,13 @@ export default function RootLayout({
             </Link>
           </div>
           <HeroHighlight className='w-[70vw] h-[80vh] bg-transparent text-white rounded-[20px]'>
-            <div className='w-full h-full rounded-2xl p-5 border-2 border-sky-600 bg-black flex items-center gap-5'>
+            <div className='w-full h-full rounded-2xl p-5 border-2 border-blue-600 shadow-2xl shadow-blue-600/50 bg-black flex items-center gap-5'>
               {children}
             </div>
           </HeroHighlight>
-          <div className='text-white text-2xl font-bold'>some data here</div>
+          <Link href={"/"} className='text-blue-600 text-md font-bold border shadow-2xl shadow-blue-700/50 border-blue-600 rounded-md active:shadow-blue-700 transition-all'>
+            <Button>Home</Button>
+          </Link>
         </section>
       </body>
     </html>
