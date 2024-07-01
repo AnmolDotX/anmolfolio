@@ -14,13 +14,13 @@ const ProjectCard = ({
   return (
     <div className={`relative h-[500px] w-[1020px] flex items-center justify-center ${className}`}>
       <div className='h-2/5 w-full rounded-full blur-3xl bg-gradient-to-br from-sky-600/50 to-blue-600 absolute inset-y-40' />
-      <div className='h-[480px] w-[1020px] relative bg-black/70 backdrop-filter backdrop-blur rounded-lg overflow-hidden hover:scale-[1.01] transition-all flex items-center gap-5 px-5'>
+      <div className='h-[450px] w-[1020px] relative bg-black/70 backdrop-filter backdrop-blur rounded-lg overflow-hidden hover:scale-[1.01] transition-all flex items-center gap-5 px-5'>
         <Image
           src={urlFor(projectData?.thumbnail)?.url()}
           width={1280}
           height={720}
           decoding='async'
-          className='w-96 h-[250px] rounded-xl flex-1 object-cover'
+          className='w-96 h-[250px] shadow-2xl shadow-black rounded-xl flex-1 object-cover'
           alt='Project thumbnail'
           quality={80}
           loading='lazy'
