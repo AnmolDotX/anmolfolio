@@ -13,8 +13,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const robotoMono = Roboto_Mono({
-    subsets: ["latin", "greek", "cyrillic"],
-    weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["latin", "greek", "cyrillic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 const ProjectsPage = () => {
@@ -23,7 +23,7 @@ const ProjectsPage = () => {
   const words = [
     {
       text: "Some of my previous",
-      className: `text-3xl font-medium tracking-wider ${robotoMono.className}`
+      className: `text-3xl font-medium tracking-wider ${robotoMono.className}`,
     },
     {
       text: "Workings.",
@@ -46,12 +46,15 @@ const ProjectsPage = () => {
   return (
     projectData && (
       <div className='flex items-center justify-center flex-col w-full h-full'>
-        <h1
-          className={`text-orange-600/90 text-4xl tracking-wide font-extrabold rounded-b-lg`}
-        >
-          Projects
-        </h1>
-        <TypewriterEffectSmooth words={words} />
+        <div className='flex flex-col items-center relative'>
+          <div className='absolute h-16 w-40 bg-blue-600/80 blur-2xl rounded-full -rotate-3' />
+          <h1
+            className={`text-orange-600/90 text-4xl tracking-wide font-extrabold rounded-b-lg z-10`}
+          >
+            Projects
+          </h1>
+          <TypewriterEffectSmooth words={words} />
+        </div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}

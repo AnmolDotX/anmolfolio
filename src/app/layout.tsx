@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <section className='w-screen h-screen bg-black flex items-center justify-center px-5'>
-          <Spotlight className='z-50' />
+          <Spotlight className='z-50' fill="blue" />
           <div className='flex flex-col gap-3'>
             <Link href={"/projects"}>
               <Button>Projects</Button>

@@ -17,7 +17,7 @@ const HomePage = () => {
     }
   };
 
-  let words = ["Web-Developer", "UI/UX", "MERN", "Django"]
+  let words = ["Frontend", "UI/UX", "Backend", "MERN", "Django"]
   if(aboutData !== undefined) {
     words.push(aboutData?.WhatIsTitle)
   }
@@ -31,9 +31,9 @@ const HomePage = () => {
       <div className='flex flex-col items-center gap-2'>
         <TextRevealCard text="Btw, my name is..." revealText="Anmol Kumar" className='h-32 flex justify-center items-center rounded-2xl border-2 border-blue-600 md:text-3xl font-mono tracking-wide text-xl lg:text-5xl font-bold text-center relative z-20'/>
         
-        <p className='text-2xl font-bold tracking-widest font-mono'>
+        <div className='text-2xl font-bold tracking-widest font-mono'>
           <FlipWords duration={1000} words={words}/>
-        </p>
+        </div>
         <p className='max-w-[330px] text-center text-xs font-light text-slate-300 mb-3'>
           {aboutData?.bio}
         </p>
