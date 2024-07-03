@@ -21,7 +21,6 @@ const Contact = () => {
     const fetchData = async () => {
       try {
         const data = await client.fetch('*[_type == "contact"]');
-        console.log(data);
         if (data && data.length > 0) {
           setContactData(data[0]); // Assuming you fetch a single contact info object
         }

@@ -17,7 +17,6 @@ const SkillsPage = () => {
 
     const fetchData = async () => {
         const data = await client.fetch('*[_type == "skill"]');
-        console.log(data[0])
         if(data) {
             setSkillData(data[0])
         }
