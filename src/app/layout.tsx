@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <section className='w-screen h-screen bg-black flex items-center justify-center px-5 relative'>
+        <section className='h-screen bg-black flex items-center justify-center px-5 relative'>
           <Spotlight className='z-50' fill="blue" />
           <div className='flex-col gap-3 hidden xl:flex'>
             <Link href={"/projects"}>
@@ -38,7 +38,7 @@ export default function RootLayout({
             </Link>
           </div>
           <HeroHighlight className='w-[90vw] sm:w-[80vw] md:w-[70vw] h-[60vh] sm:h-[80vh] bg-transparent text-white rounded-[20px]'>
-            <div className='w-full h-full rounded-2xl p-5 border-2 border-blue-600 shadow-2xl shadow-blue-600/50 bg-black flex items-center gap-5 absolute -top-16 xl:static'>
+            <div className='w-full h-full rounded-2xl border-2 border-blue-600 shadow-2xl shadow-blue-600/50 bg-black flex items-center gap-5 absolute -top-16 xl:static'>
               {children}
             </div>
           </HeroHighlight>

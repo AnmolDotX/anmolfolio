@@ -23,11 +23,11 @@ const ProjectsPage = () => {
   const words = [
     {
       text: "Some of my previous",
-      className: `text-3xl font-medium tracking-wider ${robotoMono.className}`,
+      className: `text-[12px] sm:text-lg md:text-xl 2xl:text-3xl font-medium tracking-wider ${robotoMono.className}`,
     },
     {
       text: "Workings.",
-      className: `text-blue-500 font-bold text-4xl dark:text-blue-500 ${robotoMono.className}`,
+      className: `text-blue-500 font-bold text-lg sm:text-xl md:text-2xl 2xl:text-4xl dark:text-blue-500 ${robotoMono.className}`,
     },
   ];
 
@@ -46,10 +46,10 @@ const ProjectsPage = () => {
   return (
     projectData && (
       <div className='flex items-center justify-center flex-col w-full h-full'>
-        <div className='flex flex-col items-center relative'>
-          <div className='absolute h-16 w-40 bg-blue-600/80 blur-2xl rounded-full -rotate-3' />
+        <div className='flex flex-col items-center relative pt-3'>
+          <div className='absolute h-16 w-40 bg-blue-600/80 blur-2xl rounded-full -rotate-3 z-20 sm:z-0' />
           <h1
-            className={`text-orange-600/90 text-4xl tracking-wide font-extrabold rounded-b-lg z-10`}
+            className={`text-orange-600/90 text-xl md:text-3xl 2xl:text-4xl tracking-wide font-extrabold rounded-b-lg z-10`}
           >
             Projects
           </h1>
@@ -71,7 +71,7 @@ const ProjectsPage = () => {
         >
           {projectData.map((project) => (
             <SwiperSlide key={project?._id}>
-              <ProjectCard projectData={project} className='mx-auto ' />
+              <ProjectCard projectData={project} className='mx-auto' />
             </SwiperSlide>
           ))}
         </Swiper>
