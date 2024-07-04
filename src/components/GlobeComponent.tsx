@@ -8,7 +8,7 @@ const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World)
 
 const GlobeComponent = () => {
   return (
-    <div className='flex flex-row items-center justify-center py-20 h-full dark:bg-black bg-white relative w-full'>
+    <div className='hidden lg:flex flex-row items-center justify-center py-20 h-full dark:bg-black bg-white relative lg:w-2/5'>
       <div className='mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4  flex flex-col justify-center items-center'>
         <motion.div
           initial={{
@@ -25,7 +25,7 @@ const GlobeComponent = () => {
           className='div'
         >
         </motion.div>
-        <div className='absolute w-full h-[60%] z-50 flex items-center justify-center inset-auto'>
+        <div className='absolute w-full lg:h-[50%] xl:h-[60%] z-50 flex items-center justify-center inset-auto'>
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
