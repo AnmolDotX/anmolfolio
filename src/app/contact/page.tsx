@@ -34,16 +34,12 @@ const Contact = () => {
 
   const words = [
     {
-      text: "connect me on my",
-      className: `text-3xl font-medium tracking-wider ${robotoMono.className}`,
+      text: "connect me on ",
+      className: `text-[12px] sm:text-lg md:text-xl 2xl:text-3xl font-medium tracking-wider ${robotoMono.className}`,
     },
     {
-      text: " socials, email, or number ",
-      className: `text-blue-500 font-bold text-4xl dark:text-blue-500 ${robotoMono.className}`,
-    },
-    {
-      text: " anywhere",
-      className: `text-3xl font-medium tracking-wider ${robotoMono.className}`,
+      text: " below platforms ",
+      className: `text-blue-500 font-bold text-lg sm:text-xl md:text-2xl 2xl:text-4xl dark:text-blue-500 ${robotoMono.className}`,
     },
   ];
 
@@ -51,8 +47,8 @@ const Contact = () => {
     "Let's have a chat on my phone number OR email for any professional or community works";
 
   return (
-    <div className='h-full w-full flex flex-col items-center'>
-      <div className='flex flex-col items-center relative'>
+    <div className='h-full w-full flex flex-col items-center relative overflow-hidden'>
+      <div className='flex flex-col items-center relative p-4'>
         <div className='absolute h-16 w-96 bg-blue-600/80 blur-2xl rounded-full -rotate-3' />
         <h1
           className={`text-orange-600/90 text-4xl tracking-wide font-extrabold rounded-b-lg z-10`}
@@ -66,26 +62,28 @@ const Contact = () => {
         className='h-full w-full flex justify-center items-center'
       >
         {contactData && (
-          <div className='flex h-full w-full items-center'>
-            <div className='relative flex items-center justify-center flex-1 h-full overflow-hidden'>
-              <div className='w-[400px] h-60 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 blur-3xl absolute rotate-45' />
+          <div className='flex h-full w-full items-center justify-center  px-2'>
+            <div className='relative flex items-center justify-center sm:flex-1 h-full'>
+              <div className='w-[400px] h-60 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 blur-3xl absolute rotate-45 z-20' />
               <img
                 src='/profile_yellow.jpg'
                 alt='Profile Photo'
-                className='w-64 h-96 rounded-bl-2xl rounded-tr-2xl shadow-2xl mb-4 object-cover object-center z-10 bg-clip-border shadow-orange-400 border-orange-500 border-4 animate-ping'
+                className='w-0 sm:w-48 md:w-56 lg:w-64 h-60 md:h-80 lg:h-96 z-50 rounded-bl-2xl rounded-tr-2xl sm:shadow-2xl mb-4 object-cover object-center bg-clip-border sm:shadow-orange-400 sm:border-orange-500 sm:border-4 animate-ping'
                 title='Its me BTW!'
               />
-              <Meteors number={30} />
             </div>
-            <div className='mt-4 text-center flex-1 flex flex-col items-center gap-5'>
+            <div className='mt-4 text-center z-50 sm:flex-1 flex flex-col items-center gap-5 px-5'>
               <div className='flex flex-col items-center gap-10'>
-                <TextGenerateEffect words={WelcomeText} />
-                <div className='flex flex-col items-center border-2 border-orange-500 rounded-lg bg-gradient-to-r from-blue-600/50 backdrop-filter backdrop-blur-lg to-transparent p-5 gap-5'>
-                  <p className='text-sm font-bold tracking-widest'>
+                <TextGenerateEffect
+                  className='hidden sm:block'
+                  words={WelcomeText}
+                />
+                <div className='flex flex-col items-center border-2 border-orange-500 rounded-lg bg-gradient-to-r from-blue-600/50 backdrop-filter backdrop-blur-lg to-transparent p-3 sm:p-5 gap-2 sm:gap-5'>
+                  <p className='text-xs sm:text-sm font-medium md:font-bold tracking-widest'>
                     <span className='text-orange-500'>Phone no. : </span>{" "}
                     <span>{contactData.contactNumber}</span>
                   </p>
-                  <div className='text-sm font-bold tracking-widest'>
+                  <div className='text-xs sm:text-sm font-medium md:font-bold tracking-widest'>
                     <span className='text-orange-500'>Email : </span>{" "}
                     <Link
                       href='mailto:kumaranmol8611@gmail.com'
@@ -103,7 +101,7 @@ const Contact = () => {
                     href={social.url}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-500/50 hover:bg-blue-800 hover:shadow-orange-600 transition-all hover:shadow-2xl backdrop-filter backdrop-blur-xl duration-300 mx-5 relative'
+                    className='flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/80 to-orange-400/50 hover:bg-blue-800 hover:shadow-orange-600 transition-all hover:shadow-2xl backdrop-filter backdrop-blur-xl duration-300 mx-5 relative'
                   >
                     <div className='absolute w-12 h-12 rounded-full blur-2xl bg-red-500' />
                     <Image
@@ -121,6 +119,7 @@ const Contact = () => {
           </div>
         )}
       </div>
+      <Meteors number={30} />
     </div>
   );
 };
