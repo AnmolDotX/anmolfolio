@@ -27,15 +27,15 @@ const ExperiencePage = () => {
   const words = [
     {
       text: "Few of my",
-      className: `text-3xl font-medium tracking-wider ${robotoMono.className}`,
+      className: `text-[12px] sm:text-lg md:text-xl 2xl:text-3xl font-medium tracking-wider ${robotoMono.className}`,
     },
     {
       text: " Professional",
-      className: `text-blue-500 font-bold text-4xl dark:text-blue-500 ${robotoMono.className}`,
+      className: `text-blue-500 font-bold text-lg sm:text-xl md:text-2xl 2xl:text-4xl dark:text-blue-500 ${robotoMono.className}`,
     },
     {
       text: " works.",
-      className: `text-3xl font-medium tracking-wider ${robotoMono.className}`,
+      className: `text-[12px] sm:text-lg md:text-xl 2xl:text-3xl font-medium tracking-wider ${robotoMono.className}`,
     },
   ];
 
@@ -70,7 +70,7 @@ const ExperiencePage = () => {
       <div className='flex flex-col items-center relative'>
         <div className='absolute h-20 w-96 bg-blue-600/80 blur-2xl rounded-full -rotate-6' />
         <h1
-          className={`text-orange-600/90 text-4xl tracking-wide font-extrabold rounded-b-lg z-10`}
+          className={`text-orange-600/90 text-xl md:text-3xl 2xl:text-4xl tracking-wide font-extrabold rounded-b-lg z-10`}
         >
           Experiences
         </h1>
@@ -81,15 +81,15 @@ const ExperiencePage = () => {
         className='h-full w-full p-5 overflow-scroll'
       >
         <div className='relative flex flex-col items-center'>
-          <div className='absolute left-0 transform -translate-x-1/2 w-1 bg-orange-600 h-full'></div>
+          <div className='absolute left-0 transform -translate-x-1/2 w-[2px] md:w-1 bg-orange-600 h-full'></div>
           {experiences &&
             experiences?.map((exp, index) => (
               <div key={exp._id} className='flex items-center mb-8 w-full'>
                 <div className='w-1/12 flex justify-center relative'>
-                  <div className='h-6 w-6 rounded-full bg-blue-500 absolute left-0 transform -translate-x-1/2'></div>
+                  <div className='h-3 w-3 md:h-6 md:w-6 rounded-full bg-blue-500 absolute left-0 transform -translate-x-1/2'></div>
                 </div>
-                <div className='ml-8 flex flex-col w-10/12'>
-                  <h3 className='text-xl font-semibold'>
+                <div className='ml-8 flex flex-col w-10/12 border-l-2 pl-2 py-2 rounded-l-2xl border-orange-600'>
+                  <h3 className='text-xs sm:text-base md:text-lg lg:text-xl font-medium lg:font-semibold'>
                     {exp.role} at{" "}
                     <Link
                       href={exp?.companyLink || "#"}
@@ -100,15 +100,15 @@ const ExperiencePage = () => {
                       {exp.companyName}
                     </Link>
                   </h3>
-                  <p className='text-gray-500'>
+                  <p className='text-xs font-light lg:text-base text-gray-500'>
                     {new Date(exp.startDate).toLocaleDateString()} -{" "}
                     {exp.current
                       ? "Present"
                       : new Date(exp.endDate!).toLocaleDateString()}
                   </p>
-                  <ul className='list-disc list-inside mt-2'>
+                  <ul className='list-disc list-inside mt-2 pl-2'>
                     {exp?.description?.map((desc, idx) => (
-                      <li key={idx} className='text-sm text-gray-400'>
+                      <li key={idx} className='text-xs md:text-sm text-gray-300 md:text-gray-400 mt-2'>
                         {desc}
                       </li>
                     ))}
