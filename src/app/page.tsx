@@ -29,7 +29,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className='flex flex-col w-full lg:w-3/5 items-center gap-2'>
+      <div className='flex flex-col w-full lg:w-3/5 items-center gap-2 overflow-hidden'>
         <TextRevealCard
           text='Btw, my name is...'
           revealText='Anmol Kumar'

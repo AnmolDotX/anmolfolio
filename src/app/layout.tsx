@@ -37,7 +37,7 @@ export default function RootLayout({
               <Button>Contact me</Button>
             </Link>
           </div>
-          <HeroHighlight className='w-[90vw] sm:w-[80vw] md:w-[70vw] h-[80vh] bg-transparent text-white rounded-[20px]'>
+          <HeroHighlight className='w-[90vw] sm:w-[80vw] md:w-[70vw] h-[60vh] sm:h-[80vh] bg-transparent text-white rounded-[20px]'>
             <div className='w-full h-full rounded-2xl p-5 border-2 border-blue-600 shadow-2xl shadow-blue-600/50 bg-black flex items-center gap-5 absolute -top-16 xl:static'>
               {children}
             </div>
