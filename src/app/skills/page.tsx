@@ -25,11 +25,11 @@ const SkillsPage = () => {
     const words = [
         {
           text: "Tools & Technologies",
-          className: `text-blue-500 font-bold text-4xl dark:text-blue-600 ${robotoMono.className}`
+          className: `text-blue-500 font-bold text-lg sm:text-xl md:text-2xl 2xl:text-4xl dark:text-blue-500 ${robotoMono.className}`
         },
         {
           text: "I use for developement :",
-          className: `text-3xl font-medium tracking-wider  ${robotoMono.className}`,
+          className: `text-[12px] sm:text-lg md:text-xl 2xl:text-3xl font-medium tracking-wider  ${robotoMono.className}`,
         },
       ];
 
@@ -39,12 +39,12 @@ const SkillsPage = () => {
 
     return (
         <div className="flex flex-col items-center h-full w-full relative overflow-hidden">
-            <h1 className="text-orange-600/90 text-4xl tracking-wide font-extrabold rounded-b-lg`">Skills & Tools</h1>
+            <h1 className="text-orange-600/90 text-xl md:text-3xl 2xl:text-4xl tracking-wide font-extrabold rounded-b-lg z-10`">Skills & Tools</h1>
             <TypewriterEffectSmooth words={words} />
-            <div className="h-full w-full flex flex-col">
+            <div className="h-full w-full flex flex-col overflow-y-scroll rounded-t-3xl border-t-2 border-blue-600 ">
                 <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-blue-500 border-r-4 border-b-4 rounded-bl-3xl border-blue-600 rounded-e-3xl w-fit px-4 shadow-2xl shadow-black/70">Skills</h2>
-                    <div className="h-[90%] flex flex-wrap gap-x-5 gap-y-2 py-1 justify-center items-center">
+                    {/* <h2 className="text-2xl font-bold text-blue-500 border-r-4 border-b-4 rounded-bl-3xl border-blue-600 rounded-e-3xl w-fit px-4 shadow-2xl shadow-black/70">Skills</h2> */}
+                    <div className="h-[90%] flex flex-wrap gap-x-1 sm:gap-x-5  gap-y-1 sm:gap-y-2 py-1 justify-center items-center">
                         {
                             skillsData?.skills.map((skill)=>(
                                <div key={skill._key} className="relative h-32 w-32 flex items-center justify-center">
@@ -55,9 +55,9 @@ const SkillsPage = () => {
                                         width={1280}
                                         height={720}
                                         alt={skill.name}
-                                        className="rounded-md h-20 w-20 object-cover z-20 animate-pulse hover:scale-[1.05] transition-all duration-200"
+                                        className="rounded-md h-5 w-5 sm:h-8 sm:w-8 md:h-12 md:w-12 xl:h-20 xl:w-20 object-cover z-20 animate-pulse hover:scale-[1.05] transition-all duration-200"
                                     />
-                                    <p className="text-xs text-inherit font-bold tracking-wider mt-2">{skill.name}</p>
+                                    <p className="text-xs text-inherit font-normal sm:font-medium md:font-bold tracking-wider mt-2">{skill.name}</p>
                                 </div>
                                </div>
                             ))
@@ -65,8 +65,8 @@ const SkillsPage = () => {
                     </div>
                 </div>
                 <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-blue-500 border-r-4 border-b-4 rounded-bl-3xl border-blue-600 rounded-e-3xl w-fit px-4 shadow-2xl shadow-black/70">Tools</h2>
-                    <div className="h-[90%] flex flex-wrap gap-x-5 justify-center items-center">
+                    {/* <h2 className="text-2xl font-bold text-blue-500 border-r-4 border-b-4 rounded-bl-3xl border-blue-600 rounded-e-3xl w-fit px-4 shadow-2xl shadow-black/70">Tools</h2> */}
+                    <div className="h-[90%] flex flex-wrap gap-x-1 sm:gap-x-5 justify-center items-center">
                         {
                             skillsData?.tools.map((tool)=>(
                                <div key={tool._key} className="relative h-32 w-32 flex items-center justify-center">
@@ -77,9 +77,9 @@ const SkillsPage = () => {
                                         width={1280}
                                         height={720}
                                         alt={tool.name}
-                                        className="rounded-md h-20 w-20 object-cover z-20 animate-pulse hover:scale-[1.05] transition-all duration-200"
+                                        className="rounded-md h-5 w-5 sm:h-8 sm:w-8 md:h-12 md:w-12 xl:h-20 xl:w-20 object-cover z-20 animate-pulse hover:scale-[1.05] transition-all duration-200"
                                     />
-                                    <p className="text-xs font-bold tracking-wider mt-2">{tool.name}</p>
+                                    <p className="text-xs text-inherit font-normal sm:font-medium md:font-bold tracking-wider mt-2">{tool.name}</p>
                                 </div>
                                </div>
                             ))
