@@ -24,7 +24,6 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchData();
-    alert("The app is not yet responsive for mobile or tablet! Kindly open it in full sized laptop/computer")
   }, []);
 
   return (
