@@ -12,9 +12,9 @@ const ProjectCard = ({
   className : string
 }) => {
   return (
-    <div className={`relative h-[300px] md:h-[450px] 2xl:h-[500px] w-full sm:w-[400px] md:w-[500px] lg:w-[650px] xl:w-[800px] 2xl:w-[1000px] flex flex-row md:flex-row items-center justify-center ${className}`}>
+    <div className={`relative h-[300px] md:h-[450px] 2xl:h-[500px] w-full sm:w-[400px] md:w-[500px] lg:w-[650px] xl:w-[800px] 2xl:w-[1000px] flex flex-row md:flex-row items-center justify-center z-0  ${className}`}>
       <div className='h-2/5 w-full rounded-full blur-3xl bg-gradient-to-br from-sky-600/50 to-blue-600 absolute inset-y-40' />
-      <div className=' h-[350px] sm:h-[400px] mt-12 sm:mt-40 md:mt-0 md:h-[450px] w-[1020px] relative bg-black/70 backdrop-filter backdrop-blur rounded-lg overflow-hidden hover:scale-[1.01] transition-all flex flex-col lg:flex-row items-center gap-5 px-5 py-5 xl:py-0 sm:border-4 sm:shadow-2xl sm:shadow-orange-600/70 sm:border-orange-500'>
+      <div className=' h-[350px] sm:h-[400px] mt-12 sm:mt-40 md:mt-0 md:h-[450px] w-[1020px] relative bg-black/70 backdrop-filter backdrop-blur rounded-lg overflow-hidden hover:scale-[1.01] transition-all flex flex-col lg:flex-row items-center gap-5 px-5 py-5 xl:py-0 z-0'>
         <Image
           src={urlFor(projectData?.thumbnail)?.url()}
           width={1280}

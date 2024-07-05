@@ -47,7 +47,7 @@ const ProjectsPage = () => {
     projectData && (
       <div className='flex items-center justify-center flex-col w-full h-full'>
         <div className='flex flex-col items-center relative pt-3'>
-          <div className='absolute h-16 w-40 bg-blue-600/80 blur-2xl rounded-full -rotate-3 z-20 sm:z-0' />
+          <div className='absolute h-16 w-40 bg-blue-600/80 blur-2xl rounded-full -rotate-3 z-50 sm:z-0' />
           <h1
             className={`text-orange-600/90 text-xl md:text-3xl 2xl:text-4xl tracking-wide font-extrabold rounded-b-lg z-10`}
           >
@@ -63,15 +63,17 @@ const ProjectsPage = () => {
           loop={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          autoplay={true}
+          autoplay={{
+            delay : 2000
+          }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
           centeredSlides={true}
-          className='w-full h-full flex items-center justify-center'
+          className='w-full h-full flex items-center justify-center z-0 relative'
         >
           {projectData.map((project) => (
-            <SwiperSlide key={project?._id}>
-              <ProjectCard projectData={project} className='mx-auto' />
+            <SwiperSlide key={project?._id} className="z-0 relative">
+              <ProjectCard projectData={project} className='mx-auto rounded-lg' />
             </SwiperSlide>
           ))}
         </Swiper>
